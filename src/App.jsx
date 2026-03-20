@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Inicio from './componentesEstilosbroostrap/inicio.jsx'
+import Inicio from './componentesEstilosbroostrap/Inicio.jsx'
 import InicioRB from './componentesEstilosbroostrap/InicioRB.jsx'
 import Ejercicio2 from './componentesEstilosbroostrap/Ejercicio2.jsx'
 import Card from './componentesEstilosbroostrap/Card.jsx'
@@ -12,7 +12,13 @@ function App() {
   return (
     <BrowserRouter>
       <Menuvertical />
-      <div className="container mt-4">
+      <div className="container mt-4"
+       style={{
+         marginLeft: "100px", // espacio para sidebar
+         display: "flex",
+         justifyContent: "center",
+       }}
+      >
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/inicio-rb" element={<InicioRB />} />
